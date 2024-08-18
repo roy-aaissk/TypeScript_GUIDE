@@ -1,13 +1,12 @@
 class Person {
-  // name field
   // publicを明示的に宣言することもできる。
-  name: string;
-  private age: number;
-  // 予約語
-  constructor(initName: string, initAge: number) {
-    this.name = initName;
-    this.age = initAge;
-  }
+  // initの変数の書き方は2パターンある
+  // 1. initNameのように変数を準備
+  // 2. Public, Privateとつけて変数と型を指定する
+  constructor(
+    public name: string,
+    private age: number
+  ) {}
 
   incrementAge() {
     this.age += 1;

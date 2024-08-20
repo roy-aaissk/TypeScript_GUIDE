@@ -10,7 +10,8 @@ class Person {
   // 2. Public, Privateとつけて変数と型を指定する
   constructor(
     public readonly name: string,
-    private age: number
+    // protected修飾子は継承先までアクセスを広げる方法
+    protected age: number
   ) {}
 
   incrementAge() {
